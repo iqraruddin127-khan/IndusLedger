@@ -17,7 +17,7 @@ An intelligent industrial monitoring and management platform designed to streaml
 
 * **Frontend:** React, TypeScript, Vite
 * **Backend / Database:** Supabase
-* **Styling:** Tailwind CSS (or standard CSS modules)
+* **Styling:** Tailwind CSS
 
 ---
 
@@ -32,5 +32,19 @@ Make sure you have Node.js (v18 or higher) installed on your system.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR_GITHUB_USERNAME/indusledger-ai.git](https://github.com/YOUR_GITHUB_USERNAME/indusledger-ai.git)
-   cd indusledger-ai
+   git clone [https://github.com/iqraruddin127-khan/IndusLedger.git](https://github.com/iqraruddin127-khan/IndusLedger.git)
+   cd IndusLedger
+ Install dependencies:
+ npm install
+ Set up environment variables:
+Create a .env file in the root directory and add your Supabase credentials:
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+Run the development server:
+npm run dev
+🔒 Security Notice
+The .env file containing sensitive API keys and environment configurations is excluded from version control to ensure security. Make sure to keep your environment variables confidential.
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
