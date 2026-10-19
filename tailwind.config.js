@@ -1,0 +1,140 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        // Brand palette — deep teal primary with warm amber accent.
+        // Light tints (50-200) are translucent overlays for the dark theme.
+        primary: {
+          50: 'rgba(20, 184, 166, 0.12)',
+          100: 'rgba(20, 184, 166, 0.18)',
+          200: 'rgba(45, 212, 191, 0.35)',
+          300: '#5eead4',
+          400: '#2dd4bf',
+          500: '#14b8a6',
+          600: '#0d9488',
+          700: '#0f766e',
+          800: '#115e59',
+          900: '#134e4a',
+          950: '#042f2e',
+        },
+        accent: {
+          50: 'rgba(245, 158, 11, 0.12)',
+          100: 'rgba(245, 158, 11, 0.18)',
+          200: 'rgba(251, 191, 36, 0.35)',
+          300: '#fcd34d',
+          400: '#fbbf24',
+          500: '#f59e0b',
+          600: '#fbbf24',
+          700: '#fcd34d',
+          800: '#fde68a',
+          900: '#fef3c7',
+        },
+        success: {
+          50: 'rgba(34, 197, 94, 0.12)',
+          100: 'rgba(34, 197, 94, 0.18)',
+          200: 'rgba(74, 222, 128, 0.35)',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#4ade80',
+          700: '#86efac',
+          800: '#bbf7d0',
+          900: '#dcfce7',
+        },
+        warning: {
+          50: 'rgba(249, 115, 22, 0.12)',
+          100: 'rgba(249, 115, 22, 0.18)',
+          200: 'rgba(251, 146, 60, 0.35)',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#fb923c',
+          700: '#fdba74',
+          800: '#fed7aa',
+          900: '#ffedd5',
+        },
+        danger: {
+          50: 'rgba(239, 68, 68, 0.12)',
+          100: 'rgba(239, 68, 68, 0.18)',
+          200: 'rgba(248, 113, 113, 0.35)',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#ef4444',
+          600: '#f87171',
+          700: '#fca5a5',
+          800: '#fecaca',
+          900: '#fee2e2',
+        },
+        // Neutral tones — inverted for a global dark theme: low numbers are dark
+        // surfaces, high numbers are light text. Keeps every page cohesive.
+        ink: {
+          0: '#020617',
+          50: '#0f172a',
+          100: '#1e293b',
+          200: '#334155',
+          300: '#475569',
+          400: '#94a3b8',
+          500: '#cbd5e1',
+          600: '#e2e8f0',
+          700: '#cbd5e1',
+          800: '#f1f5f9',
+          900: '#0f172a',
+          950: '#020617',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out',
+        'slide-in-left': 'slideInLeft 0.4s ease-out',
+        'pulse-ring': 'pulseRing 2s cubic-bezier(0.4,0,0.6,1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'shimmer': 'shimmer 2.5s linear infinite',
+        'data-flow': 'dataFlow 3s linear infinite',
+        'spin-slow': 'spin 3s linear infinite',
+        'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeInUp: {
+          '0%': { opacity: '0', transform: 'translateY(16px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        pulseRing: {
+          '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+          '50%': { opacity: '0.5', transform: 'scale(1.05)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000px 0' },
+          '100%': { backgroundPosition: '1000px 0' },
+        },
+        dataFlow: {
+          '0%': { strokeDashoffset: '1000' },
+          '100%': { strokeDashoffset: '0' },
+        },
+        bounceSubtle: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-4px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};
